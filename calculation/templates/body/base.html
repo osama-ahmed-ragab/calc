@@ -1,0 +1,18 @@
+<html>
+    
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <h3>The calculator app</h3>
+    <label> num1: </label>
+    <input id="num1" type="text" name="num1" value="{{ num1 }}">
+    <label> operation: </label>
+    <input id="operation" type="text" name="operation" value="{{ operation }}">
+    <label> num2: </label>
+    <input id="num2" type="text" name="num2" value="{{ num2 }}">
+    <input type="submit" value="OK"><br>
+        <label> the result is: </label>
+       <h1> {{result}}</h1>
+    </form>
+    </body>
+</html>

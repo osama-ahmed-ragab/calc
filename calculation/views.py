@@ -12,6 +12,7 @@ def calc_op(request):
             n1 = form.cleaned_data['num1']
             op = form.cleaned_data['operation']
             n2 = form.cleaned_data['num2']
+            
             if op == '+' :
                 result = n1 + n2 
                 return render(request,'body/base.html',{'result':result})
@@ -32,4 +33,5 @@ def calc_op(request):
             result= 'all fields is required'
             return render(request,'body/base.html',{'form': form, 'result':result})
     else :
+        result = 0
         return render(request,'body/base.html', {'result':result})
